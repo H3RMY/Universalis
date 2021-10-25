@@ -1,5 +1,10 @@
 ﻿l_german:
  egyptian_wealth_mod:0 "Ägyptens neuer Reichtum"
  egyptian_fleet_mod:0 "Ägyptische Flottentradition"
- egyptian_army_mod:0 "Ägyptische Armeemoral"
+ egyptian_land_morale_mod:0 "Ägyptische Armeemoral"
  egyptian_dominance_mod:0 "Ägyptische Dominanz"
+ egyptian_land_force_mod:0 "Ägyptische Armeegröße"
+ egyptian_trade_mod:0 "Ägyptischer Handel"
+ egyptian_supply_mod:0 "Ägyptische Versorgung"
+ egyptian_culture_mod:0 "Ägyptische Kultur"
+ egyptian_production_mod:0 "Ägyptische Produktion"

@@ -1,4 +1,4 @@
-egyptian_missions_slot = {
+egyptian_missions_slot1 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -111,6 +111,176 @@ egyptian_missions_slot = {
 			}
 		}
 	}
+	
+	egy_preparations = {
+		position = 4
+		icon = mission_egyptian_mamluk_soldier
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = {
+			ROOT = {
+				manpower_percentage = 0.50
+			}
+		}
+		effect = {
+			mashriq_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	egy_invasion_of_persia = {
+		position = 5
+		icon = mission_levantine_restoration
+		required_missions = { egy_preparations }
+		provinces_to_highlight = {
+			OR = { region = mashriq_region }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mashriq_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			arabia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			persia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	egy_unify_arabia = {
+		position = 6
+		icon = mission_into_arabia
+		required_missions = { egy_invasion_of_persia }
+		provinces_to_highlight = {
+			OR = { region = arabia_region }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			arabia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			arabia_region = {
+				add_province_modifier = {
+					name = "egyptian_supply_mod"
+					duration = -1
+				}
+			}
+		}
+	}
+	egy_unify_persia = {
+		position = 7
+		icon = mission_into_persia_1
+		required_missions = { egy_unify_arabia }
+		provinces_to_highlight = {
+			OR = { region = persia_region }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "egyptian_trade_mod"
+				duration = -1
+			}
+			454 = {
+				add_permanent_claim = ROOT
+			}
+			504 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+egyptian_missions_slot2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = EGY
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	egy_develop_egypt = {
+		position = 6
+		icon = mission_guilds_of_barcelona
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = {
+			has_institution = enlightenment
+			egypt_region = {
+				type = all
+				development = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "egyptian_culture_mod"
+				duration = -1
+			}
+			
+			country_event = {
+				id = universalis_egyptian_events.1
+			}
+		}
+	}
+
+	egy_culture_spread = {
+		position = 7
+		icon = mission_fatimid_caliphate
+		required_missions = { egy_develop_egypt }
+		provinces_to_highlight = { }
+		trigger = {
+			151 = {
+				culture = al_misr_arabic
+			}
+			341 = {
+				culture = al_misr_arabic
+			}
+			343 = {
+				culture = al_misr_arabic
+			}
+			410 = {
+				culture = al_misr_arabic
+			}
+			1224 = {
+				culture = al_misr_arabic
+			}
+			2999 = {
+				culture = al_misr_arabic
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "egyptian_production_mod"
+				duration = -1
+			}
+		}
+	}
 }
 
 egyptian_missions_slot5 = {
@@ -140,17 +310,35 @@ egyptian_missions_slot5 = {
 			}
 		}
 		trigger = {
-			TUN = {
-				has_opinion_modifier = {
-					who = ROOT
-					modifier = insulted
+			if = {
+				limit = {
+					exists = TUN
 				}
+				
+				TUN = {
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
+				}
+				
+				owns = 355
+				owns = 2448
+				owns = 2449
+				owns = 4567
 			}
-			
-			owns = 355
-			owns = 2448
-			owns = 2449
-			owns = 4567
+			else = {
+				owns = 355
+				owns = 2448
+				owns = 2449
+				owns = 4567
+			}
 		}
 		effect = {
 			tripolitania_area = {
@@ -197,7 +385,7 @@ egyptian_missions_slot5 = {
 			}
 		}
 	}
-	egy_defeat_tunisia = {
+	egy_defeat_tunis = {
 		position = 2
 		icon = mission_conquer_tunisia
 		required_missions = { egy_expansion_west }
@@ -309,7 +497,7 @@ egyptian_missions_slot5 = {
 	egy_defeat_morocco = {
 		position = 3
 		icon = mission_new_world_power
-		required_missions = { egy_defeat_tunisia }
+		required_missions = { egy_defeat_tunis }
 		provinces_to_highlight = {
 			OR = {
 				area = hautes_plaines_area
@@ -464,7 +652,7 @@ egyptian_missions_slot5 = {
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
-				name = "egyptian_army_mod"
+				name = "egyptian_land_morale_mod"
 				duration = 7300
 			}
 		}
@@ -525,6 +713,27 @@ egyptian_missions_slot5 = {
 			}
 			add_country_modifier = {
 				name = "egyptian_dominance_mod"
+				duration = -1
+			}
+		}
+	}
+	egy_border_the_hre = {
+		position = 6
+		icon = interfere_in_germany
+		required_missions = { egy_downfall_of_the_turks }
+		provinces_to_highlight = {
+			OR = { region = balkan_region }
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns_all_provinces = {
+				type = all
+				region = balkan_region
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "egyptian_land_force_mod"
 				duration = -1
 			}
 		}

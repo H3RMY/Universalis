@@ -1,0 +1,26 @@
+#######################################
+#   >Universalis++ Egyptian Events<   #
+#######################################
+
+namespace = universalis_egyptian_events
+
+# Coal as trade good
+country_event = {
+	id = universalis_egyptian_events.1
+	title = universalis_egyptian_events.1.t
+	desc = universalis_egyptian_events.1.d
+	fire_only_once = yes
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = universalis_egyptian_events.1.a
+		2316 = {
+			change_trade_goods = coal
+		}
+		4316 = {
+			change_trade_goods = coal
+		}
+	}
+}

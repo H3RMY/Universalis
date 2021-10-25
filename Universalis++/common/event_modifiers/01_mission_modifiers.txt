@@ -4845,10 +4845,31 @@ egyptian_fleet_mod = {
 	naval_morale = 0.1
 }
 
-egyptian_army_mod = {
+egyptian_land_morale_mod = {
 	land_morale = 0.2
 }
 
 egyptian_dominance_mod = {
 	global_missionary_strength = 0.02
+}
+
+egyptian_land_force_mod = {
+	land_forcelimit_modifier = 0.33
+	land_maintenance_modifier = -0.1
+}
+
+egyptian_trade_mod = {
+	trade_efficiency = 0.15
+}
+
+egyptian_supply_mod = {
+	supply_limit = 25
+}
+
+egyptian_culture_mod = {
+	culture_conversion_cost = -0.25
+}
+
+egyptian_production_mod = {
+	production_efficiency = 0.15
 }
