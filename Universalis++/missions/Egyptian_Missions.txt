@@ -205,6 +205,15 @@ egyptian_missions_slot1 = {
 				name = "egyptian_trade_mod"
 				duration = -1
 			}
+			125 = {
+				add_permanent_claim = ROOT
+			}
+			124 = {
+				add_permanent_claim = ROOT
+			}
+			225 = {
+				add_permanent_claim = ROOT
+			}
 			454 = {
 				add_permanent_claim = ROOT
 			}

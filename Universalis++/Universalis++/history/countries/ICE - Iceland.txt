@@ -1,6 +1,0 @@
-government = republic
-primary_culture = icelandic
-government_rank = 1
-religion = norse_pagan_reformed
-technology_group = western
-capital = 370 #Rejkyavik
