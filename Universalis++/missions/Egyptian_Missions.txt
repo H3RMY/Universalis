@@ -19,10 +19,7 @@ egyptian_missions_slot1 = {
 			}
 		}
 		trigger = {
-			owns_all_provinces = {
-				type = all
-				area = lower_nubia_area
-			}
+			owns_all_provinces = { area = lower_nubia_area }
 		}
 		effect = {
 			dongola_area = {
@@ -683,34 +680,13 @@ egyptian_missions_slot5 = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			owns_all_provinces = {
-				type = all
-				region = anatolia_region
-			}
-			owns_all_provinces = {
-				type = all
-				area = thrace_area
-			}
-			owns_all_provinces = {
-				type = all
-				area = silistria_area
-			}
-			owns_all_provinces = {
-				type = all
-				area = bulgaria_area
-			}
-			owns_all_provinces = {
-				type = all
-				area = macedonia_area
-			}
-			owns_all_provinces = {
-				type = all
-				area = northern_greece_area
-			}
-			owns_all_provinces = {
-				type = all
-				area = morea_area
-			}
+			owns_all_provinces = { region = anatolia_region }
+			owns_all_provinces = { area = thrace_area }
+			owns_all_provinces = { area = silistria_area }
+			owns_all_provinces = { area = bulgaria_area }
+			owns_all_provinces = { area = macedonia_area }
+			owns_all_provinces = { area = northern_greece_area }
+			owns_all_provinces = { area = morea_area }
 		}
 		effect = {
 			balkan_region = {
@@ -735,10 +711,7 @@ egyptian_missions_slot5 = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			owns_all_provinces = {
-				type = all
-				region = balkan_region
-			}
+			owns_all_provinces = { region = balkan_region }
 		}
 		effect = {
 			add_country_modifier = {

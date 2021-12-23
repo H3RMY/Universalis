@@ -1,0 +1,443 @@
+scandinavian_missions_slot1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	sca_unify_scandinavia = {
+		position = 1
+		icon = mission_monarch_in_throne_room
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = { region = scandinavia_region }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			scandinavia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			pomor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			arkhangelsk_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_karelia = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			karelia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	sca_invade_russia = {
+		position = 2
+		icon = mission_novgorod_the_great
+		required_missions = { sca_unify_scandinavia }
+		provinces_to_highlight = {
+			OR = {
+				area = pomor_area
+				area = arkhangelsk_area
+				area = north_karelia
+				area = karelia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			pomor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			arkhangelsk_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_karelia = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			karelia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			russia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			baltic_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	sca_control_baltic_sea = {
+		position = 3
+		icon = mission_conquer_riga
+		required_missions = { sca_invade_russia }
+		provinces_to_highlight = {
+			OR = { region = baltic_region }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baltic_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "scandinavian_trade_efficiency_mod"
+				duration = -1
+			}
+		}
+	}
+
+	sca_control_russia = {
+		position = 4
+		icon = mission_land_of_churches
+		required_missions = { sca_control_baltic_sea }
+		provinces_to_highlight = {
+			OR = { region = russia_region }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			russia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			ural_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+
+			add_country_modifier = {
+				name = "scandinavian_army_mod"
+				duration = -1
+			}
+		}
+	}
+
+	sca_conquer_brittany = {
+		position = 5
+		icon = mission_rb_conquer_brittany
+		required_missions = { }
+		provinces_to_highlight = { }
+		trigger = {
+			if = {
+				limit = {
+					exists = ENG
+				}
+				AND = {
+					total_own_and_non_tributary_subject_development = ENG
+					army_size_percentage = 1.0
+					navy_size_percentage = 1.0
+					ENG = { is_rival = ROOT }
+					calc_true_if = {
+						amount = 1
+						all_ally = {
+							is_rival = ENG
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = GBR
+				}
+				AND = {
+					total_own_and_non_tributary_subject_development = GBR
+					army_size_percentage = 1.0
+					navy_size_percentage = 1.0
+					GBR = { is_rival = ROOT }
+					calc_true_if = {
+						amount = 1
+						all_ally = {
+							is_rival = GBR
+						}
+					}
+				}
+			}
+			else = {
+				army_size_percentage = 1.0
+				navy_size_percentage = 1.0
+				total_own_and_non_tributary_subject_development = 500
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = ENG
+				}
+				add_casus_belli = {
+					target = ENG
+					type = cb_restore_personal_union
+					months = 180
+				}
+			}
+			else_if = {
+				limit = {
+					exists = GBR
+				}
+				add_casus_belli = {
+					target = GBR
+					type = cb_restore_personal_union
+					months = 180
+				}
+			}
+			else = {
+				british_isles_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+		}
+	}
+
+	sca_control_brittany = {
+		position = 6
+		icon = mission_rb_invade_england
+		required_missions = { sca_conquer_brittany }
+		provinces_to_highlight = {
+			OR = { 
+				area = east_midlands_area 
+				area = west_midlands_area 
+				area = yorkshire_area 
+				area = scottish_marches_area 
+				area = wessex_area 
+				area = home_counties_area 
+				area = east_anglia_area 
+				area = lowlands_area 
+				area = highlands_area 
+				area = kingdom_of_the_isles_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			east_midlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_midlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			wessex_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lowlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			highlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			ulster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			leinster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			connacht_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			munster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+
+			add_country_modifier = {
+				name = "scandinavian_diplomacy_mod"
+				duration = -1
+			}
+		}
+	}
+}
+
+scandinavian_missions_slot5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	sca_secure_holstein = {
+		position = 3
+		icon = mission_rb_hanseatic_east
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = { area = holstein_area }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			holstein_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			weser_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			mecklenburg_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	sca_control_luebeck = {
+		position = 4
+		icon = mission_hanseatic_city
+		required_missions = { sca_secure_holstein }
+		provinces_to_highlight = {
+			OR = { 
+				area = weser_area 
+				area = lower_saxony_area 
+				area = mecklenburg_area 
+				area = vorpommern_area 
+				area = hinter_pommern_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			weser_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_saxony_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mecklenburg_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vorpommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hinter_pommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "scandinavian_trade_steering_mod"
+				duration = -1
+			}
+		}
+	}
+}

@@ -16426,7 +16426,7 @@ SCA_ideas = {
 	sca_colonisation = {
 		colonists = 1
 	}
-	sca_colonial = {
+	sca_colonial_growth = {
 		global_colonial_growth = 0.2
 	}
 	sca_discipline = {
@@ -16470,7 +16470,7 @@ BUK_ideas = {
 	buk_technology = {
 		technology_cost = -0.1
 	}
-	buk_idea = {
+	buk_idea_cost = {
 		idea_cost = -0.1
 	}
 	buk_missionaries = {

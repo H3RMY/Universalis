@@ -5162,7 +5162,7 @@ kon_south_african_hegemony_province = {	#Accepts non-accepted culture effect
 	local_tax_modifier = 0.33
 	local_missionary_strength = 0.02
 	local_manpower_modifier = 0.33
-	local_sailors = 0.33
+	local_sailors_modifier = 0.33
 }
 
 #Country modifier
@@ -5371,6 +5371,7 @@ zan_trade_with_india = {
 #Country modifier
 zan_expansion_into_the_cape = {
 	colonists = 1
+	global_colonial_growth = 25
 }
 
 #Province modifier
@@ -5535,7 +5536,7 @@ ada_preperation_for_war = {
 ada_war_against_ethiopia = {
 	land_morale = 0.05
 	manpower_recovery_speed = 0.1
-	monthly_piety = 0.01
+	monthly_piety = 0.001
 }
 
 ada_professional_army = {
@@ -5564,7 +5565,7 @@ ada_imperial_adal_sultanate = {
 
 east_africa_fearless_army = {
 	global_manpower_modifier = 0.10
-	land_morale = 0.1
+	land_morale = 0.10
 }
 
 east_africa_attracting_capital = {
@@ -5606,7 +5607,7 @@ east_africa_blooming_nation = {
 
 east_africa_money_calls_money = {
 	inflation_reduction = 0.1
-	build_cost = -0.2
+	build_cost = -0.20
 }
 
 east_africa_big_friends = {
@@ -5801,4 +5802,23 @@ egyptian_culture_mod = {
 
 egyptian_production_mod = {
 	production_efficiency = 0.15
+}
+
+#Scandinavia
+scandinavian_trade_efficiency_mod = {
+	trade_efficiency = 0.25
+}
+
+scandinavian_army_mod = {
+	land_forcelimit_modifier = 0.33
+	land_morale = 0.15
+}
+
+scandinavian_trade_steering_mod = {
+	trade_steering = 0.2
+}
+
+scandinavian_diplomacy_mod = {
+	diplomatic_reputation = 3
+	diplomatic_annexation_cost = -0.15
 }
