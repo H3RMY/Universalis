@@ -1,0 +1,62 @@
+#########################################
+#   >Universalis++ Mission Modifiers<   #
+#########################################
+
+#Egypt
+egyptian_wealth_mod = {
+	production_efficiency = 0.15
+	inflation_reduction = 0.1
+}
+
+egyptian_fleet_mod = {
+	naval_forcelimit_modifier = 0.2
+	naval_morale = 0.1
+}
+
+egyptian_land_morale_mod = {
+	land_morale = 0.2
+}
+
+egyptian_dominance_mod = {
+	global_missionary_strength = 0.02
+}
+
+egyptian_land_force_mod = {
+	land_forcelimit_modifier = 0.33
+	land_maintenance_modifier = -0.1
+}
+
+egyptian_trade_mod = {
+	trade_efficiency = 0.15
+}
+
+egyptian_supply_mod = {
+	supply_limit = 25
+}
+
+egyptian_culture_mod = {
+	culture_conversion_cost = -0.25
+}
+
+egyptian_production_mod = {
+	production_efficiency = 0.15
+}
+
+#Scandinavia
+scandinavian_trade_efficiency_mod = {
+	trade_efficiency = 0.25
+}
+
+scandinavian_army_mod = {
+	land_forcelimit_modifier = 0.33
+	land_morale = 0.15
+}
+
+scandinavian_trade_steering_mod = {
+	trade_steering = 0.2
+}
+
+scandinavian_diplomacy_mod = {
+	diplomatic_reputation = 3
+	diplomatic_annexation_cost = -0.15
+}

@@ -1,0 +1,118 @@
+#############################
+#   >Universalis++ Ideas<   #
+#############################
+
+EGY_ideas = {
+	start = {
+		core_creation  = -0.15
+		build_cost  = -0.3
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = { 
+		tag = EGY
+	}
+	free = yes		#will be added at load.
+	
+	egy_tax = {
+		global_tax_modifier = 0.1
+	}
+	egy_construction= {
+		build_cost = -0.15
+	}
+	egy_development = {
+		development_cost = -0.1
+	}
+	egy_army_morale = {
+		land_morale = 0.1
+	}
+	egy_gov_capacity = {
+		governing_capacity_modifier = 0.2
+	}
+	egy_army_attrition = {
+		land_attrition = -0.2
+	}
+	egy_missionaries = {
+		global_missionary_strength = 0.03
+		missionaries = 1
+	}
+}
+
+SCA_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.3
+		infantry_power = 0.2
+	}
+
+	bonus = {
+		may_establish_frontier = yes
+	}
+	
+	trigger = { 
+		tag = SCA
+	}
+	free = yes		#will be added at load.
+	
+	sca_production = {
+		production_efficiency = 0.15
+	}
+	sca_colonisation = {
+		colonists = 1
+	}
+	sca_colonial_growth = {
+		global_colonial_growth = 20
+	}
+	sca_discipline = {
+		discipline = 0.05
+	}
+	sca_unrest = {
+		global_unrest = -2
+	}
+	sca_core = {
+		core_creation  = -0.15
+	}
+	sca_manpower = {
+		manpower_recovery_speed = 0.15
+	}
+}
+
+BUK_ideas = {
+	start = {
+		cavalry_power = 0.2
+		 movement_speed = 0.10
+	}
+
+	bonus = {
+		cavalry_shock  = 1
+	}
+	
+	trigger = { 
+		tag = BUK
+	}
+	free = yes		#will be added at load.
+	
+	buk_army = {
+		land_morale = 0.10
+	}
+	buk_reputation = {
+		diplomatic_reputation = 2
+	}
+	buk_sibearian_frontier = {
+		may_establish_frontier = yes
+	}
+	buk_technology = {
+		technology_cost = -0.1
+	}
+	buk_idea_cost = {
+		idea_cost = -0.1
+	}
+	buk_missionaries = {
+		global_missionary_strength = 0.02
+	}
+	buk_trade = {
+		trade_efficiency = 0.15
+	}
+}
