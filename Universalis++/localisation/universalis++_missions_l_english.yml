@@ -70,3 +70,35 @@
  sca_conquer_brittany_desc:0 ""
  sca_control_brittany_title:0 "Conquer Brittany"
  sca_control_brittany_desc:0 ""
+
+ #Sweden
+ swe_conquer_norway_title:0 "Conquer Norway"
+ swe_conquer_norway_desc:0 ""
+ swe_conquer_finland_title:0 "Conquer Finland"
+ swe_conquer_finland_desc:0 ""
+ swe_conquer_denmark_title:0 "Conquer Denmark"
+ swe_conquer_denmark_desc:0 ""
+
+ #Finland
+ fin_conquer_sweden_title:0 "Conquer Sweden"
+ fin_conquer_sweden_desc:0 ""
+ fin_conquer_norway_title:0 "Conquer Norway"
+ fin_conquer_norway_desc:0 ""
+ fin_conquer_denmark_title:0 "Conquer Denmark"
+ fin_conquer_denmark_desc:0 ""
+
+ #Denmark
+ dan_conquer_norway_title:0 "Conquer Norway"
+ dan_conquer_norway_desc:0 ""
+ dan_conquer_sweden_title:0 "Conquer Sweden"
+ dan_conquer_sweden_desc:0 ""
+ dan_conquer_finland_title:0 "Conquer Finland"
+ dan_conquer_finland_desc:0 ""
+
+ #Norway
+ nor_conquer_sweden_title:0 "Conquer Sweden"
+ nor_conquer_sweden_desc:0 ""
+ nor_conquer_finland_title:0 "Conquer Finland"
+ nor_conquer_finland_desc:0 ""
+ nor_conquer_denmark_title:0 "Conquer Denmark"
+ nor_conquer_denmark_desc:0 ""

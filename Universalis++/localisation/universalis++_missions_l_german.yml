@@ -1,4 +1,5 @@
 ﻿l_german:
+#Egypt
  egy_expansion_south:0 "In den Süden"
  egy_expansion_south_desc:0 ""
  egy_expansion_south_title:0 "In den Süden"
@@ -68,3 +69,35 @@
  sca_conquer_brittany_desc:0 ""
  sca_control_brittany_title:0 "Kontrolliert Britannien"
  sca_control_brittany_desc:0 ""
+
+ #Sweden
+ swe_conquer_norway_title:0 "Erobert Norwegen"
+ swe_conquer_norway_desc:0 ""
+ swe_conquer_finland_title:0 "Erobert Finnland"
+ swe_conquer_finland_desc:0 ""
+ swe_conquer_denmark_title:0 "Erobert Dänemark"
+ swe_conquer_denmark_desc:0 ""
+
+ #Finland
+ fin_conquer_sweden_title:0 "Erobert Schweden"
+ fin_conquer_sweden_desc:0 ""
+ fin_conquer_norway_title:0 "Erobert Norwegen"
+ fin_conquer_norway_desc:0 ""
+ fin_conquer_denmark_title:0 "Erobert Dänemark"
+ fin_conquer_denmark_desc:0 ""
+
+ #Denmark
+ dan_conquer_norway_title:0 "Erobert Norwegen"
+ dan_conquer_norway_desc:0 ""
+ dan_conquer_sweden_title:0 "Erobert Schweden"
+ dan_conquer_sweden_desc:0 ""
+ dan_conquer_finland_title:0 "Erobert Finnland"
+ dan_conquer_finland_desc:0 ""
+
+ #Norway
+ nor_conquer_sweden_title:0 "Erobert Schweden"
+ nor_conquer_sweden_desc:0 ""
+ nor_conquer_finland_title:0 "Erobert Finnland"
+ nor_conquer_finland_desc:0 ""
+ nor_conquer_denmark_title:0 "Erobert Dänemark"
+ nor_conquer_denmark_desc:0 ""

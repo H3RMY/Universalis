@@ -1,0 +1,220 @@
+norwegian_missions_scandinavia = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = NOR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	nor_conquer_sweden = {
+		position = 1
+		icon = mission_rb_settle_the_north
+		required_missions = { }
+		trigger = {
+			army_size_percentage = 1.0
+			navy_size_percentage = 1.0
+		}
+		effect = {
+			if = {
+				limit = { exists = SWE }
+				add_casus_belli = {
+					target = SWE
+					type = cb_restore_personal_union
+					months = 180
+				}
+			}
+			else = {
+				norrland_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				ostra_svealand_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				svealand_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				gotaland_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+						NOT = { province_id = 25 }
+					}
+					add_permanent_claim = ROOT
+				}
+				vastra_gotaland_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+						NOT = { province_id = 16 }
+					}
+					add_permanent_claim = ROOT
+				}
+				4151 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	nor_conquer_finland = {
+		position = 2
+		icon = mission_rb_settle_the_north
+		required_missions = { nor_conquer_sweden }
+		provinces_to_highlight = {
+			OR = { 
+				area = norrland_area 
+				area = ostra_svealand_area
+				area = svealand_area
+				province_id = 2
+				province_id = 3
+				province_id = 4166
+				province_id = 7
+				province_id = 4163
+				province_id = 4164
+				province_id = 4151
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			norrland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ostra_svealand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			svealand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2 = { country_or_non_sovereign_subject_holds = ROOT }
+			3 = { country_or_non_sovereign_subject_holds = ROOT }
+			4166 = { country_or_non_sovereign_subject_holds = ROOT }
+			7 = { country_or_non_sovereign_subject_holds = ROOT }
+			4163 = { country_or_non_sovereign_subject_holds = ROOT }
+			4164 = { country_or_non_sovereign_subject_holds = ROOT }
+			4151 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			if = {
+				limit = { exists = FIN }
+				add_casus_belli = {
+					target = FIN
+					type = cb_restore_personal_union
+					months = 180
+				}
+			}
+			else = {
+				bothnia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				finland_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				30 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	nor_conquer_denmark = {
+		position = 3
+		icon = mission_rb_settle_the_north
+		required_missions = { nor_conquer_finland }
+		provinces_to_highlight = {
+			OR = { 
+				area = bothnia_area 
+				area = finland_area
+				province_id = 30 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bothnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			finland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			30 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			if = {
+				limit = { exists = DAN }
+				add_casus_belli = {
+					target = DAN
+					type = cb_restore_personal_union
+					months = 180
+				}
+			}
+			else = {
+				denmark_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				skaneland_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				jutland_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				25 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT	}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+}

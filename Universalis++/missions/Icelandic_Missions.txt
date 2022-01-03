@@ -53,12 +53,12 @@ icelandic_missions_slot2 = {
 			owns_core_province = 1105
 		}
 		effect = {
-			1104{
+			1104 = {
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
 			}
-			1105{
+			1105 = {
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
