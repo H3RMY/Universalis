@@ -1,4 +1,8 @@
 ﻿l_english:
+ #Egypt
  universalis_egyptian_events.1.t:0 "Mysterious coal discovery!"
  universalis_egyptian_events.1.d:0 "Geologists found the raw material coal in our provinces! Perhaps this will bring us prosperity!"
  universalis_egyptian_events.1.a:0 "Finally!"
+
+#Hungary
+ flavor_hun.1.e:0 "János Hunyadi shall be our new King."
