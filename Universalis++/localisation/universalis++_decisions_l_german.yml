@@ -1,6 +1,10 @@
 ﻿l_german:
+ #Scandinavia
  scandinavian_nation_title:0 "Gründet Skandinavien auf militärischem Wege"
  scandinavian_nation_desc:0 "Über unzählige Jahrhunderte waren die nordischen Königreiche entzweit und haben gegeneinander Kriege geführt. Vergangene Versuche, eine Union zu gründen, waren schließlich nicht erfolgreich, sehr zur Freude der anderen europäischen Großmächte. Aber dennoch bleibt die Idee einer bleibenden Union sehr reizvoll..."
  scandinavian_nation_diplomatically_title:0 "Gründet Skandinavien auf diplomatischem Wege"
  scandinavian_nation_diplomatically_desc:0 "Über unzählige Jahrhunderte waren die nordischen Königreiche entzweit und haben gegeneinander Kriege geführt. Vergangene Versuche, eine Union zu gründen, waren schließlich nicht erfolgreich, sehr zur Freude der anderen europäischen Großmächte. Aber dennoch bleibt die Idee einer bleibenden Union sehr reizvoll..."
-
+ 
+ #General
+ kill_regency_title:0 "Stürze den Regentschaftsrat"
+ kill_regency_desc:0 ""

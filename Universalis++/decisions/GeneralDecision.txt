@@ -1,0 +1,21 @@
+country_decisions = {
+	kill_regency = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			has_regency = yes
+			ai = no
+		}
+		allow = {
+			stability = 3
+		}
+		effect = {
+			define_ruler = {
+				dynasty = ROOT
+				culture = ROOT
+				religion = ROOT
+				hide_skills = yes
+			}
+		}
+	}
+}

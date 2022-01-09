@@ -1,6 +1,11 @@
 ﻿l_english:
+ #Scandinavia
  scandinavian_nation_title:0 "Form Scandinavian Nation Militarily"
  scandinavian_nation_desc:0 "For untold centuries the Kingdoms of the North have been divided and locked in internecine power struggles. Previous attempts at Union have ultimately failed, to the delight of their European neighbors. Even so, the vision of a lasting union remains a tantalizing possibility..."
  scandinavian_nation_diplomatically_title:0 "Form Scandinavian Nation Diplomatically"
  scandinavian_nation_diplomatically_desc:0 "For untold centuries the Kingdoms of the North have been divided and locked in internecine power struggles. Previous attempts at Union have ultimately failed, to the delight of their European neighbors. Even so, the vision of a lasting union remains a tantalizing possibility..."
+
+ #General
+ kill_regency_title:0 "Overthrow the Regency Council"
+ kill_regency_desc:0 ""
 

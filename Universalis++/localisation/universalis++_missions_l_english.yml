@@ -102,3 +102,13 @@
  nor_conquer_finland_desc:0 ""
  nor_conquer_denmark_title:0 "Conquer Denmark"
  nor_conquer_denmark_desc:0 ""
+
+#Leon
+ lon_secure_iberia_title:0 "Secure the Nation"
+ lon_secure_iberia_desc:0 ""
+ lon_unify_iberia_title:0 "Unify Iberia"
+ lon_unify_iberia_desc:0 ""
+ lon_invade_portugal_title:0 "Invade Portugal"
+ lon_invade_portugal_desc:0 ""
+ lon_invade_naples_title:0 "Invade Napels"
+ lon_invade_naples_desc:0 ""
