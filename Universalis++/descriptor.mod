@@ -7,5 +7,5 @@ tags={
 	"Gameplay"
 }
 name="Universalis++"
-supported_version="1.32.2"
+supported_version="1.33.2"
 remote_file_id="2642102965"

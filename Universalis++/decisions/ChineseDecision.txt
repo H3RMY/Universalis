@@ -1,0 +1,16 @@
+country_decisions = {
+	swap_china = {
+		major = yes
+		potential = {
+			tag = MNG
+		}
+		allow = {
+			stability = 3
+		}
+		effect = {
+			ROOT = {
+				country_event = { id = universalis_chinese_events.1 }
+			}
+		}
+	}
+}

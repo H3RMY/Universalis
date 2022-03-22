@@ -1,0 +1,157 @@
+#######################################
+#   >Universalis++ Chinese Events<   #
+#######################################
+
+namespace = universalis_chinese_events
+
+# Chinese country swap
+country_event = {
+	id = universalis_chinese_events.1
+	title = universalis_chinese_events.1.t
+	desc = universalis_chinese_events.1.d
+	fire_only_once = yes
+	picture = EP_MANIHOLE_HELMET_eventPicture
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = universalis_chinese_events.1.a
+		ROOT = { 
+			change_tag = CGS 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.b
+		ROOT = {
+			change_tag = CHC 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.c
+		ROOT = { 
+			change_tag = CDL  
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.e
+		ROOT = { 
+			change_tag = HUA  
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.f
+		ROOT = { 
+			change_tag = JIN  
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.g
+		ROOT = { 
+			change_tag = LNG 
+			swap_free_idea_group = yes
+		}
+	}
+	
+	option = {
+		name = universalis_chinese_events.1.h
+		ROOT = { 
+			change_tag = CMI 
+			swap_free_idea_group = yes
+		}
+	}
+	
+	option = {
+		name = universalis_chinese_events.1.i
+		ROOT = { 
+			change_tag = MIN  
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.j
+		ROOT = { 
+			change_tag = CMI  
+			swap_free_idea_group = yes
+		}
+	}
+	
+	option = {
+		name = universalis_chinese_events.1.k
+		ROOT = { 
+			change_tag = QIC  
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.l
+		ROOT = { 
+			change_tag = CSH 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.m
+		ROOT = { 
+			change_tag = TNG  
+			swap_free_idea_group = yes
+		}
+	}
+	
+	option = {
+		name = universalis_chinese_events.1.n
+		ROOT = { 
+			change_tag = WUU 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.o
+		ROOT = { 
+			change_tag = CXI 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.p
+		ROOT = { 
+			change_tag = YAN 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.q
+		ROOT = { 
+			change_tag = CYI 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.r
+		ROOT = { 
+			change_tag = QIN 
+			swap_free_idea_group = yes
+		}
+	}
+
+	option = {
+		name = universalis_chinese_events.1.s
+		ROOT = { add_prestige = 5 }
+	}
+}

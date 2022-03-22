@@ -19,6 +19,7 @@
  desc_egyptian_land_force_mod:0 ""
  desc_egyptian_land_morale_mod:0 ""
  desc_egyptian_dominance_mod:0 ""
+
  #Scandinavia
  scandinavian_trade_efficiency_mod:0 "Scandinavian Trade Efficiency"
  scandinavian_army_mod:0 "Scandinavian Army"

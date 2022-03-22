@@ -8,3 +8,7 @@
  #General
  kill_regency_title:0 "Stürze den Regentschaftsrat"
  kill_regency_desc:0 ""
+
+ #China
+ swap_china_title:0 "Finde das wahre CHINA!"
+ swap_china_desc:0 ""
